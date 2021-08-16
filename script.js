@@ -45,7 +45,7 @@ const getPopular = async reg => {
         let {results} = data;
         results = results.filter(el => el.poster_path !== null).slice(0,5);
         console.log(results)
-        results.forEach((el, i) => document.getElementsByClassName('top_rated')[0].insertAdjacentHTML('beforeend', renderTopRated(el, i+1)))
+        results.forEach((el, i) => document.getElementsByClassName('popular')[0].insertAdjacentHTML('beforeend', renderPopular(el, i+1)))
     } catch (error) {
         console.log(error)
     }
@@ -58,7 +58,7 @@ const renderNowPlaying = (data) => {
     <img class="w-32" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${data.poster_path}" alt="">
     <p class="text-base bg-red-600 text-white text-center">Now Playing</p>
     <h1 class="text-lg font-bold w-32">${data.original_title}</h1>
-    <p class="w-32">${data.vote_average > 0 ? data.vote_average : 'Unrated'}</p>
+    <p class="w-32">${data.vote_average > 0 ? data.vote_average * 10 + '%' : 'Unrated'}</p>
     <p class="text-xs text-gray-400 w-32">${data.release_date}</p>
     </div>
     </div>
@@ -72,7 +72,7 @@ const renderUpcoming = data => {
                     <img class="w-32" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${data.poster_path}" alt="">
                     <p class="text-base bg-blue-600 text-white text-center">Upcoming</p>
                     <h1 class="text-lg font-bold w-32">${data.original_title}</h1>
-                    <p class="w-32">${data.vote_average > 0 ? data.vote_average : 'Unrated'}</p>
+                    <p class="w-32">${data.vote_average > 0 ? data.vote_average * 10 + '%' : 'Unrated'}</p>
                     <p class="text-xs text-gray-400 w-32">${data.release_date}</p>
                 </div>
             </div>
@@ -89,12 +89,29 @@ const renderTopRated = (data,rank) => {
                     <img class="w-32" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${data.poster_path}" alt="">
                     <p class="text-base bg-yellow-500 text-white text-center">Top Rated</p>
                     <h1 class="text-lg font-bold w-32">${data.original_title}</h1>
-                    <p class="w-32">${data.vote_average}</p>
+                    <p class="w-32">${data.vote_average > 0 ? data.vote_average * 10 + '%' : 'Unknown'}</p>
                     <p class="text-xs text-gray-400 w-32">${data.release_date}</p>
                 </div>
             </div>
     `
     return html
+}
+
+const renderPopular = (data, rank) => {
+    const html = `<div class="relative w-40 m-2 hover:shadow-2xl hover:border-4 hover:border-gray-500">
+                <div class="absolute right-0 bg-indigo-500 w-8 h-8 rounded-full text-white">
+                    <p class="pos-cent font-bold text-xl">${rank}</p>
+                </div>
+                <div onclick="specificMovie('${data.id}')" class="text-left w-32 component mx-auto my-4">
+                    <img class="w-32" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${data.poster_path}" alt="">
+                    <p class="text-base bg-indigo-500 text-white text-center">Popular</p>
+                    <h1 class="text-lg font-bold w-32">${data.original_title}</h1>
+                    <p class="w-32">${data.vote_average > 0 ? data.vote_average * 10 + '%' : 'Unknown'}</p>
+                    <p class="text-xs text-gray-400 w-32">${data.release_date}</p>
+                </div>
+            </div>
+    `
+    return html;
 }
 
 // Click Event
@@ -105,3 +122,4 @@ const renderTopRated = (data,rank) => {
 getNowPlaying();
 getUpcoming();
 getTopRated('ID');
+getPopular('ID');
