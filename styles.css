@@ -35,7 +35,7 @@ nav span {
 }
 
 .nav_link a:hover {
-    color: gold
+    color: #F60A20
 }
 
 .nav__ {
@@ -143,6 +143,18 @@ nav span {
 
 #search_box:hover {
     background-color:#F60A20 ;
+}
+
+.now_playing_color {
+    color: #F60A20;
+}
+
+.upcoming_color {
+    color: #F60A20;
+}
+
+.banner_blue {
+    background-color: #2962FF;
 }
 
 
