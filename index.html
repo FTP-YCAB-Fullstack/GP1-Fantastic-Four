@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,53 +11,113 @@
 </head>
 <body>
     <section id="navigation_bar">
-        <nav class="navigation_bar">
-
+        <nav class="sticky relative navigation_bar h-16 w-full nav__">
+            <span id="title_logo_white" class="fantastics absolute text-2xl text-white font-bold top-3 left-8">Fantastic <span id="title_logo_red" class="text-yellow-500"> Film</span></span>
+            <div class="nav_link absolute w-96 right-8 top-4 text-base text-white font-bold flex justify-around">
+                <a role="button" href="#now_playing" class="" onclick="hideSection('top_rated', 'popular', 'search_result', 'now_playing', 'upcoming');">Now Playing</a>
+                <a role="button" href="#upcoming" class="" onclick="hideSection('top_rated', 'popular', 'search_result', 'now_playing', 'upcoming');">Upcoming</a>
+                <a role="button" href="#top_rated" class="" onclick="hideSection('now_playing','upcoming', 'search_result', 'top_rated', 'popular');">Top Rated</a>
+                <a role="button" href="#popular" class="" onclick="hideSection('now_playing','upcoming', 'search_result', 'top_rated', 'popular');">Popular</a>
+            </div>
+            <select class="nav_select p-2 absolute right-8 top-3 rounded-lg hidden" name="category" id="" onchange="testFunc();">
+                <option value="now_playing,upcoming,top_rated,popular,search_result">Now Playing</option>
+                <option value="upcoming,now_playing,top_rated,popular,search_result">Upcoming</option>
+                <option value="top_rated,upcoming,search_result,now_playing,popular">Top Rated</option>
+                <option value="popular,upcoming,search_result,top_rated,now_playing">Popular</option>
+            </select>
         </nav>
     </section>
 
     <section id="header">
-        <div class="bg-gray-400">
-            <div class="pt-6"><p class="text-center font-bold text-3xl ml-7 text-gray-800">Welcome to Fantastic Film!</p></div>
-            <div class="p-6">
-                <div class="bg-white flex items-center rounded-full shadow-xl w-3/5 m-auto">
-                  <input class="focus:ring-2 focus:ring-blue-600 rounded-l-full w-full py-4 px-6 text-gray-600 leading-tight focus:outline-none" id="search" type="text" placeholder="Search">
-                  <div class="p-0">
-                    <button class="bg-blue-500 text-white rounded-full p-0.5 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center" type="submit"><i class="fa fa-search"></i>   
-                    </button>
+        <div class="nav__ relative vh-96">
+            <form action="index.html" onsubmit="search(event);">
+                <div class="width-96 pos-cent text-white">
+                    <p class="head_text text-center text-6xl font-bold">Welcome to <span class="head_text_white">Fantastic <span class="head_text_red">Film</span></span> !</p>
+                    <p class="head_subtext text-center my-6 text-2xl">We share the same love, love of a <span class="text-yellow-500 font-bold head_subtext_red">film</span>.</p>
+                    <div class="input mt-3">
+                        <div class="input_search bg-white flex items-center rounded-full w-3/5 shadow-xl m-auto">
+                          <input id="search_input" class="rounded-l-full w-full py-4 px-6 text-gray-600 leading-tight focus:outline-none" id="search" type="text" placeholder="Search" autocomplete="off">
+                          <div class="p-0">
+                            <button id="search_box" class="text-white rounded-full p-0.5 focus:outline-none w-12 h-12 flex items-center justify-center" type="submit"><i class="fa fa-search"></i>   
+                            </button>
+                            </div>
+                          </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
+            </form>
+            </div>
     </section>
     
     <section id="now_playing">
-        <h1 class="text-center text-2xl font-bold">Now Playing</h1>
-        <div class="now_playing flex justify-center flex-wrap">
+        <div class="outline">
+            <h1 class="text-center text-2xl font-bold">Now Playing</h1>
+            <h1 class="text-center text-lg font-bold">In <span class="now_playing_color">Indo</span>nesia</h1>
+            <div class="now_playing flex justify-center flex-wrap">
+    
+            </div>
+        </div>
+    </section>
+
+    <section id="upcoming" class="">
+        <div class="outline">
+            <h1 class="text-center text-2xl font-bold">Upcoming</h1>
+            <h1 class="text-center text-lg font-bold">In <span class="upcoming_color">Indo</span>nesia</h1>
+            <div class="upcoming flex justify-center flex-wrap">
+    
+            </div>
+        </div>
+    </section>
+
+    <section id="top_rated" class="hidden">
+        <div class="flex flex-col outline">
+            <h1 class="text-center text-2xl font-bold mb-3">Top Rated</h1>
+            <select class="text-center self-center rounded-lg p-1 gap-x-2 text-gray-900" onchange="topRated(this);">
+                <option value="id">Indonesia</option>
+                <option value="us">United States</option>
+                <option value="gb">United Kingdom</option>
+                <option value="jp">Japan</option>
+                <option value="kr">South Korea</option>
+            </select>
+            <div class="mt-3 top_rated flex justify-center flex-wrap">
+            </div>
+        </div>
+    </section>
+
+    <section id="popular" class="hidden">
+        <div class="flex flex-col outline">
+            <h1 class="text-center text-2xl font-bold mb-3">Popular</h1>
+            <select class="text-center self-center rounded-lg p-1 gap-x-2 text-gray-900" onchange="popular(this);">
+                <option value="id">Indonesia</option>
+                <option value="us">United States</option>
+                <option value="gb">United Kingdom</option>
+                <option value="jp">Japan</option>
+                <option value="kr">South Korea</option>
+            </select>
+            <div class="popular flex justify-center flex-wrap">
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="search_result" class="hidden">
+        <div class="outline search__res">
+            <h1 class="text-center text-2xl font-bold">Search Result</h1>
+            <div class="search_result flex justify-center flex-wrap">
+    
+            </div>
+        </div>
+    </section>
+
+    <section id="modal">
+        <div class="modal hidden">
 
         </div>
     </section>
 
-    <section id="upcoming">
-        <h1 class="text-center text-2xl font-bold">Upcoming</h1>
-        <div class="upcoming flex justify-center flex-wrap">
+    <footer class="footer_ py-2 text-center">
+        <span class="font-bold text-white">Created by Fantastic Four © 2021</span>
+    </footer>
 
-        </div>
-    </section>
-
-    <section id="top_rated">
-        <h1 class="text-center text-2xl font-bold">Top Rated</h1>
-        <div class="top_rated flex justify-center flex-wrap">
-            
-        </div>
-    </section>
-
-    <section id="popular">
-        <h1 class="text-center text-2xl font-bold">Popular</h1>
-        <div class="popular flex justify-center flex-wrap">
-            
-        </div>
-    </section>
     <script src="script.js"></script>
 </body>
 </html>

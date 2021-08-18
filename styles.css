@@ -1,7 +1,80 @@
-myModal {
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+/* ==================== FONT AZONIX ==================== */
+@font-face {
+    font-family: 'AzonixRegular';
+    src: url('./Azonix-Font/AzonixRegular.eot');
+    src: url('AzonixRegular.eot?#iefix') format('embedded-opentype'),
+         url('./Azonix-Font/AzonixRegular.svg') format('svg'),
+         url('./Azonix-Font/AzonixRegular.ttf') format('truetype'),
+         url('./Azonix-Font/AzonixRegular.woff') format('woff'),
+         url('./Azonix-Font/AzonixRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }  
+  /* ==================== FONT AZONIX  ==================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #1E1E20
+}
+
+.font-reenie {
+    font-family: 'Reenie Beanie', cursive;
+}
+
+nav span {
+    font-family: 'Reenie Beanie', cursive;
+}
+
+.nav_link {
+    color: #F2F2F2;
+}
+
+.nav_link a:hover {
+    color: #F60A20
+}
+
+.nav__ {
+    background-color: #18181A
+}
+
+.hidden {
+    display: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.movie_card {
+    background-color: rgba(65, 69, 72, 0.6);
+    border-radius: 0.5rem;
+}
+
+.vh-96 {
+    height: 80vh;
+}
+
+.width-96 {
+    width: 80%;
+}
+
+.outline {
+    margin: 3rem 0;
+    color: white;
+}
+
+.myModal {
     /* display: none; */
     background-color: black;
-    background-color: rgb(0,0,0,0.4);
+    background-color: rgb(0, 0, 0, 0.4);
     position: fixed;
     top: 0;
     left: 0;
@@ -26,8 +99,164 @@ myModal {
     transform: translate(50%, -50%);
 }
 
-.pos-cent-e{
+.pos-cent-e {
     position: absolute;
     right: 50%;
     transform: translate(50%);
+}
+
+.footer_ {
+    background-color: #18181A;
+}
+
+#title_logo_white {
+    font-family: 'AzonixRegular';
+    color: #F2F2F2;
+}
+
+#title_logo_red {
+    font-family: 'AzonixRegular';
+    color: #F60A20;
+}
+
+.head_text {
+    color: #F2F2F2;
+}
+
+.head_text_red {
+    color: #F60A20;
+    font-family: 'AzonixRegular';
+}
+
+.head_text_white {
+    font-family: 'AzonixRegular';
+}
+
+.head_subtext_red {
+    color: #F60A20;
+}
+
+#search_box {
+    color: #F2F2F2;
+    background-color: #18181A;
+}
+
+#search_box:hover {
+    background-color:#F60A20 ;
+}
+
+.now_playing_color {
+    color: #F60A20;
+}
+
+.upcoming_color {
+    color: #F60A20;
+}
+
+.banner_blue {
+    background-color: #2962FF;
+}
+
+
+@keyframes myAnim {
+    30% {
+        margin: 0 0 1rem 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav_link {
+        display: none;
+    }
+
+    .head_text {
+        font-size: 2rem;
+    }
+
+    .vh-96 {
+        height: 60vh;
+    }
+
+    .modal-content {
+        width: 95%;
+        text-align: center;
+    }
+
+    .close_modal {
+        justify-content: center;
+    }
+
+    .input_search {
+        width: 100%;
+    }
+
+    .footer {
+        margin: 2rem 0 0 0;
+    }
+}
+
+@media (max-width: 361px) {
+    .fantastics {
+        font-size: 1.3rem;
+    }
+
+    .vh-96 {
+        height: 60vh;
+    }
+
+    .nav_select {
+        position: absolute;
+        position: inherit;
+        top: 1.1rem;
+        font-size: 0.8rem;
+    }
+
+    .head_text {
+        margin: 1rem 0 0 0;
+        font-size: 2rem;
+    }
+
+    .head_subtext {
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 660px) {
+    .nav_link {
+        display: none;
+    }
+
+    .nav_select {
+        display: block;
+        padding: 0.1rem;
+    }
+}
+
+@media (max-width: 408px) {
+    .vh-96 {
+        height: 60vh;
+    }
+
+    .fantastics {
+        left: 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .close_modal {
+        justify-content: center;
+    }
+
+    .rating__date {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 281px) {
+    .nav_select {
+        right: 10px;
+    }
 }
