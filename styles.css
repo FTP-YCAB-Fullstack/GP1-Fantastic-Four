@@ -1,11 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
+/* ==================== FONT AZONIX ==================== */
+@font-face {
+    font-family: 'AzonixRegular';
+    src: url('./Azonix-Font/AzonixRegular.eot');
+    src: url('AzonixRegular.eot?#iefix') format('embedded-opentype'),
+         url('./Azonix-Font/AzonixRegular.svg') format('svg'),
+         url('./Azonix-Font/AzonixRegular.ttf') format('truetype'),
+         url('./Azonix-Font/AzonixRegular.woff') format('woff'),
+         url('./Azonix-Font/AzonixRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }  
+  /* ==================== FONT AZONIX  ==================== */
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: rgb(31, 34, 38)
+    background-color: #1E1E20
 }
 
 .font-reenie {
@@ -16,12 +30,16 @@ nav span {
     font-family: 'Reenie Beanie', cursive;
 }
 
+.nav_link {
+    color: #F2F2F2;
+}
+
 .nav_link a:hover {
     color: gold
 }
 
 .nav__ {
-    background-color: rgb(27, 24, 18)
+    background-color: #18181A
 }
 
 .hidden {
@@ -88,7 +106,17 @@ nav span {
 }
 
 .footer_ {
-    background-color: rgb(27, 24, 18);
+    background-color: #18181A;
+}
+
+#title_logo_white {
+    font-family: 'AzonixRegular';
+    color: #F2F2F2;
+}
+
+#title_logo_red {
+    font-family: 'AzonixRegular';
+    color: #F60A20;
 }
 
 @keyframes myAnim {
