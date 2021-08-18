@@ -157,6 +157,14 @@ nav span {
         display: none;
     }
 
+    .head_text {
+        font-size: 2rem;
+    }
+
+    .vh-96 {
+        height: 60vh;
+    }
+
     .modal-content {
         width: 95%;
         text-align: center;
