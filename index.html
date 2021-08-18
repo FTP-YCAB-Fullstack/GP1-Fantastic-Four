@@ -11,16 +11,20 @@
 </head>
 <body>
     <section id="navigation_bar">
-        <nav class="navigation_bar">
-            <div class="w-full h-14 bg-indigo-300 flex items-center justify-between">
-                <p class="text-white ml-4 text-3xl">FANTASTIC FILM</p>
-                <div class="p-10 text-base">
-                    <a class="rounded-lg mr-10 font-semibold text-white text-lg p-2 bg-indigo-300 hover:bg-indigo-500 focus:" href="">Now Playing</a>
-                    <a class="rounded-lg mr-10 font-semibold text-white text-lg p-2 bg-indigo-300 hover:bg-indigo-500" href="">Upcoming</a>
-                    <a class="rounded-lg mr-10 font-semibold text-white text-lg p-2 bg-indigo-300 hover:bg-indigo-500" href="">Top Rated</a>
-                    <a class="rounded-lg font-semibold text-white text-lg p-2 bg-indigo-300 hover:bg-indigo-500" href="">Popular</a>
-                </div>
+        <nav class="sticky relative navigation_bar h-16 w-full nav__">
+            <span class="fantastics absolute text-4xl text-white font-bold top-3 left-8">Fantastic <span class="text-yellow-500"> Film</span></span>
+            <div class="nav_link absolute w-96 right-8 top-4 text-base text-white font-bold flex justify-around">
+                <a role="button" href="#now_playing" class="" onclick="hideSection('top_rated', 'popular', 'search_result', 'now_playing', 'upcoming');">Now Playing</a>
+                <a role="button" href="#upcoming" class="" onclick="hideSection('top_rated', 'popular', 'search_result', 'now_playing', 'upcoming');">Upcoming</a>
+                <a role="button" href="#top_rated" class="" onclick="hideSection('now_playing','upcoming', 'search_result', 'top_rated', 'popular');">Top Rated</a>
+                <a role="button" href="#popular" class="" onclick="hideSection('now_playing','upcoming', 'search_result', 'top_rated', 'popular');">Popular</a>
             </div>
+            <select class="nav_select p-2 absolute right-8 top-3 rounded-lg hidden" name="category" id="" onchange="testFunc();">
+                <option value="'top_rated,popular,search_result,now_playing,upcoming">Now Playing</option>
+                <option value="top_rated,popular,search_result,now_playing,upcoming">Upcoming</option>
+                <option value="now_playing,upcoming,search_result,top_rated,popular">Top Rated</option>
+                <option value="now_playing,upcoming,search_result,top_rated,popular">Popular</option>
+            </select>
         </nav>
     </section>
 
