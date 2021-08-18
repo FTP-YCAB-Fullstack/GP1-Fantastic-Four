@@ -196,6 +196,7 @@ nav span {
     }
 
     .head_text {
+        margin: 1rem;
         font-size: 2rem;
     }
 
@@ -235,5 +236,11 @@ nav span {
     .rating__date {
         display: flex;
         justify-content: center;
+    }
+}
+
+@media (max-width: 281px) {
+    .nav_select {
+        right: 10px;
     }
 }
