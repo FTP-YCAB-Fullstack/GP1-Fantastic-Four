@@ -1,4 +1,59 @@
-myModal {
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(31, 34, 38)
+}
+
+.font-reenie {
+    font-family: 'Reenie Beanie', cursive;
+}
+
+nav span {
+    font-family: 'Reenie Beanie', cursive;
+}
+
+.nav_link a:hover {
+    color: gold
+}
+
+.nav__ {
+    background-color: rgb(27, 24, 18)
+}
+
+.hidden {
+    display: none;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.movie_card {
+    background-color: rgba(65, 69, 72, 0.6);
+    border-radius: 0.5rem;
+}
+
+.vh-96 {
+    height: 80vh;
+}
+
+.width-96 {
+    width: 80%;
+}
+
+.outline {
+    margin: 3rem 0;
+    color: white;
+}
+
+.myModal {
     /* display: none; */
     background-color: black;
     background-color: rgb(0,0,0,0.4);
