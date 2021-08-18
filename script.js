@@ -112,7 +112,7 @@ const renderUpcoming = data => {
     const html = `<div class="movie_card transform relative w-40 m-2 hover:shadow-2xl hover:scale-105">
                 <div onclick="specificMovie('${data.id}')" class="text-left w-32 component mx-auto my-4">
                     <img class="w-32" src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/${data.poster_path}" alt="">
-                    <p class="text-base bg-blue-600 text-white text-center">Upcoming</p>
+                    <p class="banner_blue text-base text-white text-center">Upcoming</p>
                     <h1 class="text-lg font-bold w-32">${data.original_title}</h1>
                     <p class="w-32">${data.vote_average > 0 ? data.vote_average * 10 + '%' : 'Unrated'}</p>
                     <p class="text-xs text-gray-400 w-32">${data.release_date}</p>
