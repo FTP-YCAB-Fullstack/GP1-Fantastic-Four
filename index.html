@@ -29,18 +29,21 @@
     </section>
 
     <section id="header">
-        <div class="bg-gray-400">
-            <div class="pt-6"><p class="text-center font-bold text-3xl ml-7 text-gray-800">Welcome to Fantastic Film!</p></div>
-            <div class="p-6">
-                <div class="bg-white flex items-center rounded-full shadow-xl w-3/5 m-auto">
-                  <input class="focus:ring-2 focus:ring-blue-600 rounded-l-full w-full py-4 px-6 text-gray-600 leading-tight focus:outline-none" id="search" type="text" placeholder="Search">
-                  <div class="p-0">
-                    <button class="bg-blue-500 text-white rounded-full p-0.5 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center" type="submit"><i class="fa fa-search"></i>   
-                    </button>
+        <div class="nav__ relative vh-96">
+            <div class="width-96 pos-cent text-white">
+                <p class="text-center text-6xl font-bold">Welcome to <span class="font-reenie">Fantastic <span class="text-yellow-500">Film</span></span> !</p>
+                <p class="text-center my-6 text-2xl">We share the same love, love of a <span class="text-yellow-500 font-bold">film</span>.</p>
+                <div class="my-8">
+                    <div class="bg-white flex items-center rounded-full w-3/5 shadow-xl m-auto">
+                      <input id="search_input" class="focus:ring-2 focus:ring-blue-600 rounded-l-full w-full py-4 px-6 text-gray-600 leading-tight focus:outline-none" id="search" type="text" placeholder="Search">
+                      <div class="p-0">
+                        <button id="search_box" class="bg-yellow-500 text-white rounded-full p-0.5 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center" type="button"><i class="fa fa-search"></i>   
+                        </button>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
+            </div>
     </section>
     
     <section id="now_playing">
@@ -88,6 +91,21 @@
             <div class="popular flex justify-center flex-wrap">
                 
             </div>
+        </div>
+    </section>
+
+    <section id="search_result" class="hidden">
+        <div class="outline search__res">
+            <h1 class="text-center text-2xl font-bold">Search Result</h1>
+            <div class="search_result flex justify-center flex-wrap">
+    
+            </div>
+        </div>
+    </section>
+
+    <section id="modal">
+        <div class="modal hidden">
+
         </div>
     </section>
     <script src="script.js"></script>
