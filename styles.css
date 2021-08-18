@@ -189,6 +189,10 @@ nav span {
     .input_search {
         width: 100%;
     }
+
+    .footer {
+        margin: 2rem 0 0 0;
+    }
 }
 
 @media (max-width: 361px) {
@@ -208,7 +212,7 @@ nav span {
     }
 
     .head_text {
-        margin: 1rem;
+        margin: 1rem 0 0 0;
         font-size: 2rem;
     }
 
