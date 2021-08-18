@@ -119,6 +119,33 @@ nav span {
     color: #F60A20;
 }
 
+.head_text {
+    color: #F2F2F2;
+}
+
+.head_text_red {
+    color: #F60A20;
+    font-family: 'AzonixRegular';
+}
+
+.head_text_white {
+    font-family: 'AzonixRegular';
+}
+
+.head_subtext_red {
+    color: #F60A20;
+}
+
+#search_box {
+    color: #F2F2F2;
+    background-color: #18181A;
+}
+
+#search_box:hover {
+    background-color:#F60A20 ;
+}
+
+
 @keyframes myAnim {
     30% {
         margin: 0 0 1rem 0;
