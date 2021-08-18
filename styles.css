@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    background-color: rgb(31, 34, 38)
+    background-color: #1E1E20
 }
 
 .font-reenie {
@@ -30,12 +30,16 @@ nav span {
     font-family: 'Reenie Beanie', cursive;
 }
 
+.nav_link {
+    color: #F2F2F2;
+}
+
 .nav_link a:hover {
     color: gold
 }
 
 .nav__ {
-    background-color: rgb(27, 24, 18)
+    background-color: #18181A
 }
 
 .hidden {
@@ -102,7 +106,17 @@ nav span {
 }
 
 .footer_ {
-    background-color: rgb(27, 24, 18);
+    background-color: #18181A;
+}
+
+#title_logo_white {
+    font-family: 'AzonixRegular';
+    color: #F2F2F2;
+}
+
+#title_logo_red {
+    font-family: 'AzonixRegular';
+    color: #F60A20;
 }
 
 @keyframes myAnim {
