@@ -130,10 +130,6 @@ nav span {
         display: none;
     }
 
-    .nav_select {
-        display: block;
-    }
-
     .modal-content {
         width: 95%;
         text-align: center;
@@ -158,12 +154,10 @@ nav span {
     }
 
     .nav_select {
-        width: 32%;
         position: absolute;
         position: inherit;
         top: 1.1rem;
         font-size: 0.8rem;
-        padding: 0.2rem;
     }
 
     .head_text {
@@ -176,19 +170,25 @@ nav span {
     }
 }
 
-@media (max-width: 641px) {
+@media (max-width: 660px) {
     .nav_link {
         display: none;
     }
 
     .nav_select {
         display: block;
+        padding: 0.1rem;
     }
 }
 
-@media (max-width: 321px) {
+@media (max-width: 408px) {
     .vh-96 {
         height: 60vh;
+    }
+
+    .fantastics {
+        left: 1rem;
+        font-size: 1rem;
     }
 }
 

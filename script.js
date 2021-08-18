@@ -254,7 +254,7 @@ function search(e) {
 function testFunc() {
     let x = document.getElementsByClassName('nav_select')[0].value;
     x = x.split(',');
-    // console.log(x)
+    console.log(x);
     hideRes(x);
 }
 
@@ -282,4 +282,6 @@ getUpcoming();
 getTopRated('ID');
 getPopular('ID');
 
-// window.location.replace(`${window.location.protocol}//${window.location.hostname}:${wind}`);
+if (screen.width <= 411) {
+    hideRes(['now_playing', 'upcoming'])
+}
