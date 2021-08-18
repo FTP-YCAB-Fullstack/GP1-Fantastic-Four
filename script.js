@@ -69,7 +69,7 @@ async function reqApiSearch(query) {
         let data = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=2eb8dae5e1988df3f72f80c01551e09a&language=en-US&query=${query}&page=1&include_adult=false`);
         data = await data.json();
         let result = data.results.filter(el => el.poster_path !== null);
-        // console.log(result)
+        console.log(result)
         if (result.length === 0) {
             let html = `<h1 class="text-center text-4xl font-bold text-white">Sorry we cannot find your movie, try another keyword</h1>`
             document.getElementsByClassName('search_result')[0].insertAdjacentHTML('afterbegin', html);
@@ -77,7 +77,8 @@ async function reqApiSearch(query) {
         }
         result.forEach((value, index, array) => document.getElementsByClassName('search_result')[0].insertAdjacentHTML('beforeend', renderSearch(value)))
     } catch (err) {
-        console.log(err)
+        let html = `<h1 class="text-center text-4xl font-bold text-white">Sorry we cannot find your movie, try another keyword</h1>`
+        document.getElementsByClassName('search_result')[0].insertAdjacentHTML('afterbegin', html);
     }
 }
 
@@ -282,6 +283,6 @@ getUpcoming();
 getTopRated('ID');
 getPopular('ID');
 
-if (screen.width <= 411) {
+if (screen.width <= 414) {
     hideRes(['now_playing', 'upcoming'])
 }
