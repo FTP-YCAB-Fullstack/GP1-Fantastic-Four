@@ -49,7 +49,7 @@ const getPopular = async reg => {
         let data = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=2eb8dae5e1988df3f72f80c01551e09a&language=en-US&page=1&region=${reg}`);
         data = await data.json();
         let {results} = data;
-        console.log(results.length)
+        // console.log(results.length)
         if (results.length > 0) {
             results = results.filter(el => el.poster_path !== null).slice(0,5);
             results.forEach((el, i) => document.getElementsByClassName('popular')[0].insertAdjacentHTML('beforeend', renderPopular(el, i+1)))
@@ -69,7 +69,7 @@ async function reqApiSearch(query) {
         let data = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=2eb8dae5e1988df3f72f80c01551e09a&language=en-US&query=${query}&page=1&include_adult=false`);
         data = await data.json();
         let result = data.results.filter(el => el.poster_path !== null);
-        console.log(result)
+        // console.log(result)
         if (result.length === 0) {
             let html = `<h1 class="text-center text-4xl font-bold text-white">Sorry we cannot find your movie, try another keyword</h1>`
             document.getElementsByClassName('search_result')[0].insertAdjacentHTML('afterbegin', html);
@@ -183,10 +183,10 @@ function showModal(data) {
                         <p>Produced by <span class="text-lg font-bold">${prod.length > 0 ? prod[0].name : `-`}</span></p>
                         <p class="my-8 leading-relaxed">${data.overview}</p>
                         <div class="rating__date">
-                            <div class="inline-block w-24 h-8 bg-red-400 text-white inline-block mr-2 mb-4">
+                            <div class="rating inline-block w-24 h-8 bg-red-400 text-white inline-block mr-2 mb-4">
                                 <p class="py-1 text-center">${data.vote_average > 0 ? data.vote_average * 10 + '%'  + ' Score': 'No Rating'}</p>
                             </div>
-                            <div class="inline-block w-32 bg-indigo-500 text-white">
+                            <div class="release-date inline-block w-32 h-8 bg-indigo-500 text-white">
                                 <p class="py-1 text-center">${data.release_date !== "" ? data.release_date : "No Release Date"}</p>
                             </div>
                         </div>
@@ -220,6 +220,17 @@ const hideSection = (...hidden) => {
     });
 }
 
+const hideRes = (...hidden) => {
+    let x = hidden.flat(1);
+    x.forEach((el, i) => {
+        if (i < 1) {
+            document.getElementById(el).classList.remove('hidden');
+        } else {
+            document.getElementById(el).classList.add('hidden');
+        }
+    })
+}
+
 function search(e) {
     e.preventDefault();
     let data = document.getElementById('search_input').value;
@@ -243,8 +254,8 @@ function search(e) {
 function testFunc() {
     let x = document.getElementsByClassName('nav_select')[0].value;
     x = x.split(',');
-    console.log(x)
-    hideSection(x);
+    // console.log(x)
+    hideRes(x);
 }
 
 function topRated(x) {

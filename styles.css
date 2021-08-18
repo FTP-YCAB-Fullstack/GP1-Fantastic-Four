@@ -156,11 +156,21 @@ nav span {
     .nav_select {
         display: block;
     }
+}
 
-    .input_search {
-        width: 100%;
+@media (max-width: 321px) {
+    .vh-96 {
+        height: 60vh;
     }
-} 
+}
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .close_modal {
+        justify-content: center;
+    }
+
+    .rating__date {
+        display: flex;
+        justify-content: center;
+    }
 }
