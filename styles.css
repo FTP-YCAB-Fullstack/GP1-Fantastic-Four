@@ -156,4 +156,11 @@ nav span {
     .nav_select {
         display: block;
     }
+
+    .input_search {
+        width: 100%;
+    }
 } 
+
+@media (max-width: 768px) {
+}
