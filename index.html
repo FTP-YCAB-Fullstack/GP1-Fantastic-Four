@@ -40,30 +40,50 @@
     </section>
     
     <section id="now_playing">
-        <h1 class="text-center text-2xl font-bold">Now Playing</h1>
-        <div class="now_playing flex justify-center flex-wrap">
-
+        <div class="outline">
+            <h1 class="text-center text-2xl font-bold">Now Playing</h1>
+            <h1 class="text-center text-lg font-bold">In <span class="text-red-600">Indo</span>nesia</h1>
+            <div class="now_playing flex justify-center flex-wrap">
+    
+            </div>
         </div>
     </section>
 
-    <section id="upcoming">
-        <h1 class="text-center text-2xl font-bold">Upcoming</h1>
-        <div class="upcoming flex justify-center flex-wrap">
-
+    <section id="upcoming" class="">
+        <div class="outline">
+            <h1 class="text-center text-2xl font-bold">Upcoming</h1>
+            <h1 class="text-center text-lg font-bold">In <span class="text-red-600">Indo</span>nesia</h1>
+            <div class="upcoming flex justify-center flex-wrap">
+    
+            </div>
         </div>
     </section>
 
-    <section id="top_rated">
-        <h1 class="text-center text-2xl font-bold">Top Rated</h1>
-        <div class="top_rated flex justify-center flex-wrap">
-            
+    <section id="top_rated" class="hidden">
+        <div class="outline">
+            <h1 class="text-center text-2xl font-bold">Top Rated</h1>
+            <div class="my-4 bg-white flex items-center rounded-full w-1/5 shadow-xl m-auto tex-gray-900">
+                <input id="top_result" class="focus:ring-2 focus:ring-blue-600 rounded-l-full w-full py-2 px-6 text-gray-600 leading-tight focus:outline-none" id="search" type="text" placeholder="2 Alpha Country Code">
+                <div class="p-0">
+                  <button id="top_search" class="bg-yellow-500 text-white rounded-full p-0.5 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center" type="button"><i class="fa fa-search"></i>   
+                  </button>
+                  </div>
+                </div>
+            <div class="top_rated flex justify-center flex-wrap">
+            </div>
         </div>
     </section>
 
-    <section id="popular">
-        <h1 class="text-center text-2xl font-bold">Popular</h1>
-        <div class="popular flex justify-center flex-wrap">
-            
+    <section id="popular" class="hidden">
+        <div class="outline">
+            <h1 class="text-center text-2xl font-bold">Popular</h1>
+            <div class="text-center text-gray-900">
+                <input type="text" id="pop_result">
+                <button id="pop_search">Search</button>
+            </div>
+            <div class="popular flex justify-center flex-wrap">
+                
+            </div>
         </div>
     </section>
     <script src="script.js"></script>
