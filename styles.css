@@ -157,8 +157,12 @@ nav span {
         display: none;
     }
 
-    .nav_select {
-        display: block;
+    .head_text {
+        font-size: 2rem;
+    }
+
+    .vh-96 {
+        height: 60vh;
     }
 
     .modal-content {
@@ -185,12 +189,10 @@ nav span {
     }
 
     .nav_select {
-        width: 32%;
         position: absolute;
         position: inherit;
         top: 1.1rem;
         font-size: 0.8rem;
-        padding: 0.2rem;
     }
 
     .head_text {
@@ -203,19 +205,35 @@ nav span {
     }
 }
 
-@media (max-width: 641px) {
+@media (max-width: 660px) {
     .nav_link {
         display: none;
     }
 
     .nav_select {
         display: block;
+        padding: 0.1rem;
+    }
+}
+
+@media (max-width: 408px) {
+    .vh-96 {
+        height: 60vh;
     }
 
-    .input_search {
-        width: 100%;
+    .fantastics {
+        left: 1rem;
+        font-size: 1rem;
     }
-} 
+}
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .close_modal {
+        justify-content: center;
+    }
+
+    .rating__date {
+        display: flex;
+        justify-content: center;
+    }
 }

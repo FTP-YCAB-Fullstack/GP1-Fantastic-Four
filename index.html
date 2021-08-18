@@ -20,10 +20,10 @@
                 <a role="button" href="#popular" class="" onclick="hideSection('now_playing','upcoming', 'search_result', 'top_rated', 'popular');">Popular</a>
             </div>
             <select class="nav_select p-2 absolute right-8 top-3 rounded-lg hidden" name="category" id="" onchange="testFunc();">
-                <option value="top_rated,popular,search_result,now_playing,upcoming">Now Playing</option>
-                <option value="top_rated,popular,search_result,now_playing,upcoming">Upcoming</option>
-                <option value="now_playing,upcoming,search_result,top_rated,popular">Top Rated</option>
-                <option value="now_playing,upcoming,search_result,top_rated,popular">Popular</option>
+                <option value="now_playing,upcoming,top_rated,popular,search_result">Now Playing</option>
+                <option value="upcoming,now_playing,top_rated,popular,search_result">Upcoming</option>
+                <option value="top_rated,upcoming,search_result,now_playing,popular">Top Rated</option>
+                <option value="popular,upcoming,search_result,top_rated,now_playing">Popular</option>
             </select>
         </nav>
     </section>
@@ -71,7 +71,7 @@
     <section id="top_rated" class="hidden">
         <div class="flex flex-col outline">
             <h1 class="text-center text-2xl font-bold mb-3">Top Rated</h1>
-            <select class="self-center rounded-lg p-1 gap-x-2 text-gray-900" onchange="topRated(this);">
+            <select class="text-center self-center rounded-lg p-1 gap-x-2 text-gray-900" onchange="topRated(this);">
                 <option value="id">Indonesia</option>
                 <option value="us">United States</option>
                 <option value="gb">United Kingdom</option>
@@ -86,7 +86,7 @@
     <section id="popular" class="hidden">
         <div class="flex flex-col outline">
             <h1 class="text-center text-2xl font-bold mb-3">Popular</h1>
-            <select class="self-center rounded-lg p-1 gap-x-2 text-gray-900" onchange="popular(this);">
+            <select class="text-center self-center rounded-lg p-1 gap-x-2 text-gray-900" onchange="popular(this);">
                 <option value="id">Indonesia</option>
                 <option value="us">United States</option>
                 <option value="gb">United Kingdom</option>
