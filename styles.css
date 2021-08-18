@@ -86,3 +86,29 @@ nav span {
     right: 50%;
     transform: translate(50%);
 }
+
+
+@keyframes myAnim {
+    30% {
+        margin: 0 0 1rem 0;
+    }
+}
+
+@media (max-width: 411px) {
+    .nav_link {
+        display: none;
+    }
+
+    .nav_select {
+        display: block;
+    }
+
+    .modal-content {
+        width: 95%;
+        text-align: center;
+    }
+
+    .close_modal {
+        justify-content: center;
+    }
+}
