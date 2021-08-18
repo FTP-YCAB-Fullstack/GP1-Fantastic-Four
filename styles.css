@@ -56,7 +56,7 @@ nav span {
 .myModal {
     /* display: none; */
     background-color: black;
-    background-color: rgb(0,0,0,0.4);
+    background-color: rgb(0, 0, 0, 0.4);
     position: fixed;
     top: 0;
     left: 0;
@@ -81,12 +81,15 @@ nav span {
     transform: translate(50%, -50%);
 }
 
-.pos-cent-e{
+.pos-cent-e {
     position: absolute;
     right: 50%;
     transform: translate(50%);
 }
 
+.footer_ {
+    background-color: rgb(27, 24, 18);
+}
 
 @keyframes myAnim {
     30% {
@@ -94,7 +97,7 @@ nav span {
     }
 }
 
-@media (max-width: 411px) {
+@media (max-width: 576px) {
     .nav_link {
         display: none;
     }
@@ -111,4 +114,53 @@ nav span {
     .close_modal {
         justify-content: center;
     }
+
+    .input_search {
+        width: 100%;
+    }
+}
+
+@media (max-width: 361px) {
+    .fantastics {
+        font-size: 1.3rem;
+    }
+
+    .vh-96 {
+        height: 60vh;
+    }
+
+    .nav_select {
+        width: 32%;
+        position: absolute;
+        position: inherit;
+        top: 1.1rem;
+        font-size: 0.8rem;
+        padding: 0.2rem;
+    }
+
+    .head_text {
+        font-size: 2rem;
+    }
+
+    .head_subtext {
+        margin: 0;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 641px) {
+    .nav_link {
+        display: none;
+    }
+
+    .nav_select {
+        display: block;
+    }
+
+    .input_search {
+        width: 100%;
+    }
+} 
+
+@media (max-width: 768px) {
 }

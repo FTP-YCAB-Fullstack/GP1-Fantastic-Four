@@ -172,8 +172,8 @@ function showModal(data) {
     const {production_companies: prod, genres: genre} = data
     // console.log(genre)
     const html = `<div class="myModal">
-            <div class="modal-content rounded-3xl">
-                <div onclick="closeModal();" class="relative close__button mb-4 w-8 h-8 bg-red-300 rounded-full float-right hover:shadow-2xl hover:bg-red-900">
+            <div class="relative modal-content rounded-3xl">
+                <div onclick="closeModal();" class="close_modal absolute close__button mb-4 w-8 h-8 bg-red-300 right-2 rounded-full hover:shadow-2xl hover:bg-red-900">
                     <a role="button" class="pos-cent text-white font-bold">X</a>
                 </div>
                 <div class="info flex my-4 flex-wrap justify-center gap-x-16">
@@ -220,32 +220,41 @@ const hideSection = (...hidden) => {
     });
 }
 
-document.getElementById('search_box').addEventListener('click', () => {
+function search(e) {
+    e.preventDefault();
     let data = document.getElementById('search_input').value;
+    document.getElementById('search_input').value = '';
     document.getElementsByClassName('search_result')[0].innerHTML = '';
     hideSection('top_rated', 'popular');
     hideSection('now_playing', 'upcoming');
     document.getElementById('search_result').classList.remove('hidden');
     reqApiSearch(data)
-});
+}
 
-document.getElementById('pop_search').addEventListener('click', () => {
-    let data = document.getElementById('pop_result').value;
-    document.getElementsByClassName('popular')[0].innerHTML = '';
-    getPopular(data);
-});
-
-document.getElementById('top_search').addEventListener('click', () => {
-    let data = document.getElementById('top_result').value;
-    document.getElementsByClassName('top_rated')[0].innerHTML = '';
-    getTopRated(data);
-});
+// document.getElementById('search_box').addEventListener('click', () => {
+//     let data = document.getElementById('search_input').value;
+//     document.getElementsByClassName('search_result')[0].innerHTML = '';
+//     hideSection('top_rated', 'popular');
+//     hideSection('now_playing', 'upcoming');
+//     document.getElementById('search_result').classList.remove('hidden');
+//     reqApiSearch(data)
+// });
 
 function testFunc() {
     let x = document.getElementsByClassName('nav_select')[0].value;
     x = x.split(',');
     console.log(x)
     hideSection(x);
+}
+
+function topRated(x) {
+    document.getElementsByClassName('top_rated')[0].innerHTML = '';
+    getTopRated(x.value);
+}
+
+function popular(x) {
+    document.getElementsByClassName('popular')[0].innerHTML = '';
+    getPopular(x.value);
 }
 
 
@@ -261,3 +270,5 @@ getNowPlaying();
 getUpcoming();
 getTopRated('ID');
 getPopular('ID');
+
+// window.location.replace(`${window.location.protocol}//${window.location.hostname}:${wind}`);

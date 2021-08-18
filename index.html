@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,19 +30,21 @@
 
     <section id="header">
         <div class="nav__ relative vh-96">
-            <div class="width-96 pos-cent text-white">
-                <p class="text-center text-6xl font-bold">Welcome to <span class="font-reenie">Fantastic <span class="text-yellow-500">Film</span></span> !</p>
-                <p class="text-center my-6 text-2xl">We share the same love, love of a <span class="text-yellow-500 font-bold">film</span>.</p>
-                <div class="my-8">
-                    <div class="bg-white flex items-center rounded-full w-3/5 shadow-xl m-auto">
-                      <input id="search_input" class="focus:ring-2 focus:ring-blue-600 rounded-l-full w-full py-4 px-6 text-gray-600 leading-tight focus:outline-none" id="search" type="text" placeholder="Search">
-                      <div class="p-0">
-                        <button id="search_box" class="bg-yellow-500 text-white rounded-full p-0.5 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center" type="button"><i class="fa fa-search"></i>   
-                        </button>
+            <form action="index.html" onsubmit="search(event);">
+                <div class="width-96 pos-cent text-white">
+                    <p class="head_text text-center text-6xl font-bold">Welcome to <span class="font-reenie">Fantastic <span class="text-yellow-500">Film</span></span> !</p>
+                    <p class="head_subtext text-center my-6 text-2xl">We share the same love, love of a <span class="text-yellow-500 font-bold">film</span>.</p>
+                    <div class="input mt-3">
+                        <div class="input_search bg-white flex items-center rounded-full w-3/5 shadow-xl m-auto">
+                          <input id="search_input" class="rounded-l-full w-full py-4 px-6 text-gray-600 leading-tight focus:outline-none" id="search" type="text" placeholder="Search" autocomplete="off">
+                          <div class="p-0">
+                            <button id="search_box" class="bg-yellow-500 text-white rounded-full p-0.5 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center" type="submit"><i class="fa fa-search"></i>   
+                            </button>
+                            </div>
+                          </div>
                         </div>
-                      </div>
                     </div>
-                  </div>
+            </form>
             </div>
     </section>
     
@@ -67,27 +69,30 @@
     </section>
 
     <section id="top_rated" class="hidden">
-        <div class="outline">
-            <h1 class="text-center text-2xl font-bold">Top Rated</h1>
-            <div class="my-4 bg-white flex items-center rounded-full w-1/5 shadow-xl m-auto tex-gray-900">
-                <input id="top_result" class="focus:ring-2 focus:ring-blue-600 rounded-l-full w-full py-2 px-6 text-gray-600 leading-tight focus:outline-none" id="search" type="text" placeholder="2 Alpha Country Code">
-                <div class="p-0">
-                  <button id="top_search" class="bg-yellow-500 text-white rounded-full p-0.5 hover:bg-blue-400 focus:outline-none w-12 h-12 flex items-center justify-center" type="button"><i class="fa fa-search"></i>   
-                  </button>
-                  </div>
-                </div>
-            <div class="top_rated flex justify-center flex-wrap">
+        <div class="flex flex-col outline">
+            <h1 class="text-center text-2xl font-bold mb-3">Top Rated</h1>
+            <select class="self-center rounded-lg p-1 gap-x-2 text-gray-900" onchange="topRated(this);">
+                <option value="id">Indonesia</option>
+                <option value="us">United States</option>
+                <option value="gb">United Kingdom</option>
+                <option value="jp">Japan</option>
+                <option value="kr">South Korea</option>
+            </select>
+            <div class="mt-3 top_rated flex justify-center flex-wrap">
             </div>
         </div>
     </section>
 
     <section id="popular" class="hidden">
-        <div class="outline">
-            <h1 class="text-center text-2xl font-bold">Popular</h1>
-            <div class="text-center text-gray-900">
-                <input type="text" id="pop_result">
-                <button id="pop_search">Search</button>
-            </div>
+        <div class="flex flex-col outline">
+            <h1 class="text-center text-2xl font-bold mb-3">Popular</h1>
+            <select class="self-center rounded-lg p-1 gap-x-2 text-gray-900" onchange="popular(this);">
+                <option value="id">Indonesia</option>
+                <option value="us">United States</option>
+                <option value="gb">United Kingdom</option>
+                <option value="jp">Japan</option>
+                <option value="kr">South Korea</option>
+            </select>
             <div class="popular flex justify-center flex-wrap">
                 
             </div>
@@ -112,7 +117,7 @@
     <footer class="footer_ py-2 text-center">
         <span class="font-bold text-white">Created by Fantastic Four</span>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
