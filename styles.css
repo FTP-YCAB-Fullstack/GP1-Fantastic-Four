@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
 
+/* ==================== FONT AZONIX ==================== */
+@font-face {
+    font-family: 'AzonixRegular';
+    src: url('./Azonix-Font/AzonixRegular.eot');
+    src: url('AzonixRegular.eot?#iefix') format('embedded-opentype'),
+         url('./Azonix-Font/AzonixRegular.svg') format('svg'),
+         url('./Azonix-Font/AzonixRegular.ttf') format('truetype'),
+         url('./Azonix-Font/AzonixRegular.woff') format('woff'),
+         url('./Azonix-Font/AzonixRegular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }  
+  /* ==================== FONT AZONIX  ==================== */
+
 html {
     scroll-behavior: smooth;
 }
